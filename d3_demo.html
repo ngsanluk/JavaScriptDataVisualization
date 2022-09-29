@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title></title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js">
-    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/d3@7.6.1/dist/d3.min.js"
+    ></script>
   </head>
   <body>
     <nav>
@@ -17,12 +19,36 @@
       <a href="./d3_demo.html">D3.js</a>
     </nav>
     <h1>D3 Demo</h1>
-    <hr>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia consectetur sunt, accusamus eveniet, delectus quisquam voluptas soluta. Quas consectetur, accusantium voluptate quae? Sed voluptatum incidunt, necessitatibus ex! Veritatis, aliquid, voluptate!</p>
-    <p>Ut delectus porro voluptatem natus accusantium quisquam explicabo nesciunt odio. Temporibus, dolorem a facere alias accusantium id magni tempore, animi cumque sit esse et fugiat unde repellat doloremque culpa iure!</p>
-    <p>Ex impedit quae laborum consectetur maiores, quasi obcaecati suscipit pariatur facere, voluptas unde laboriosam accusamus fugit nostrum debitis perspiciatis labore excepturi illo velit architecto veniam nobis vel repudiandae? Laborum, quae!</p>
-    <p>Consequuntur laborum nobis voluptatem, distinctio quis soluta aliquid earum, facere velit nemo, provident, similique rerum asperiores? Recusandae consectetur nisi ipsam, temporibus, vitae ab sint, expedita excepturi dolorum, consequatur nostrum facilis.</p>
-    <p>Dolore eius tenetur maiores reprehenderit provident quia atque laudantium, quo facilis iusto officia aut possimus! Dolores rem animi veritatis amet modi, labore, consectetur, officiis excepturi quo non quae quod sunt!</p>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
+      consectetur sunt, accusamus eveniet, delectus quisquam voluptas soluta.
+      Quas consectetur, accusantium voluptate quae? Sed voluptatum incidunt,
+      necessitatibus ex! Veritatis, aliquid, voluptate!
+    </p>
+    <p>
+      Ut delectus porro voluptatem natus accusantium quisquam explicabo nesciunt
+      odio. Temporibus, dolorem a facere alias accusantium id magni tempore,
+      animi cumque sit esse et fugiat unde repellat doloremque culpa iure!
+    </p>
+    <p>
+      Ex impedit quae laborum consectetur maiores, quasi obcaecati suscipit
+      pariatur facere, voluptas unde laboriosam accusamus fugit nostrum debitis
+      perspiciatis labore excepturi illo velit architecto veniam nobis vel
+      repudiandae? Laborum, quae!
+    </p>
+    <p>
+      Consequuntur laborum nobis voluptatem, distinctio quis soluta aliquid
+      earum, facere velit nemo, provident, similique rerum asperiores?
+      Recusandae consectetur nisi ipsam, temporibus, vitae ab sint, expedita
+      excepturi dolorum, consequatur nostrum facilis.
+    </p>
+    <p>
+      Dolore eius tenetur maiores reprehenderit provident quia atque laudantium,
+      quo facilis iusto officia aut possimus! Dolores rem animi veritatis amet
+      modi, labore, consectetur, officiis excepturi quo non quae quod sunt!
+    </p>
+
     <script type="text/javascript">
       var paragraphs = document.getElementsByTagName("p");
       for (var i = 0; i < paragraphs.length; i++) {
@@ -30,20 +56,21 @@
         paragraph.style.setProperty("color", "blue", null);
       }
 
-      d3.select("body").style("background-color", "black");
+      d3.select("body").style("background-color", "#CCC");
 
-      d3.selectAll("p").style("color", function() {
+      d3.selectAll("p").style("color", function () {
         return "hsl(" + Math.random() * 360 + ",100%,50%)";
       });
 
-      d3.selectAll("p").style("color", function(d, i) {
+      d3.selectAll("p").style("color", function (d, i) {
         return i % 2 ? "#fff" : "#eee";
       });
 
       d3.selectAll("p")
         .data([4, 8, 15, 16, 23, 42])
-          .style("font-size", function(d) { return d + "px"; });
-
+        .style("font-size", function (d) {
+          return d + "px";
+        });
     </script>
   </body>
 </html>
