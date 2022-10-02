@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>D3.js Demo</title>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/d3@7.6.1/dist/d3.min.js"
@@ -19,6 +19,10 @@
       <a href="./d3_demo.html">D3.js</a>
     </nav>
     <h1>D3 Demo</h1>
+    <p>
+      Open the source codes and uncomment the JavaScript script block by block
+      to see how D3.js manipulate the outlooks of HTML components.
+    </p>
     <hr />
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
@@ -49,28 +53,35 @@
       modi, labore, consectetur, officiis excepturi quo non quae quod sunt!
     </p>
 
+    <hr />
     <script type="text/javascript">
-      var paragraphs = document.getElementsByTagName("p");
-      for (var i = 0; i < paragraphs.length; i++) {
-        var paragraph = paragraphs.item(i);
-        paragraph.style.setProperty("color", "blue", null);
-      }
+      // Change Page Background
+      // d3.select("body").style("background-color", "#999");
 
-      d3.select("body").style("background-color", "#CCC");
+      // Looping processing on multiple elements
+      // var paragraphs = document.querySelectorAll("p");
+      // for (var i = 0; i < paragraphs.length; i++) {
+      //   var paragraph = paragraphs.item(i);
+      //   paragraph.style.setProperty("border", "1px #666 solid", null);
+      //   paragraph.style.setProperty("padding", "10px", null);
+      // }
 
-      d3.selectAll("p").style("color", function () {
-        return "hsl(" + Math.random() * 360 + ",100%,50%)";
-      });
+      // Assign random color to text paragraphs
+      // d3.selectAll("p").style("color", function () {
+      //   return "hsl(" + Math.random() * 360 + ", 100%, 50%)";
+      // });
 
-      d3.selectAll("p").style("color", function (d, i) {
-        return i % 2 ? "#fff" : "#eee";
-      });
+      // Assign alternative colors to text paragraphs
+      // d3.selectAll("p").style("color", function (d, i) {
+      //   return i % 2 ? "orange" : "blue";
+      // });
 
-      d3.selectAll("p")
-        .data([4, 8, 15, 16, 23, 42])
-        .style("font-size", function (d) {
-          return d + "px";
-        });
+      // Defines a list of text size and sequently assign to paraph
+      // d3.selectAll("p")
+      //   .data([8, 16, 24, 32, 48])
+      //   .style("font-size", function (d) {
+      //     return d + "px";
+      //   });
     </script>
   </body>
 </html>
