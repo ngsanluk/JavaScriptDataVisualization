@@ -31,6 +31,12 @@
         border: solid 0px red;
       }
 
+      .hyperlink-demo,
+      .js-interaction-demo {
+        background: #cccccc;
+        padding: 20px;
+      }
+
       article {
         border: solid 0px red;
         margin-bottom: 10px;
@@ -64,6 +70,7 @@
 
       footer {
         border: solid 0px red;
+        text-align: center;
       }
 
       #lucky-number {
@@ -93,10 +100,10 @@
       websites
     </p>
 
-    <hr />
-    <h2>Hyper Link Demo</h2>
-    go to <a href="https://www.google.com">Go to Google</a>
-    <hr />
+    <div class="hyperlink-demo">
+      <h2>Hyper Link Demo</h2>
+      go to <a href="https://www.google.com">Go to Google</a>
+    </div>
 
     <article class="featured top">
       <h2>Article One Here</h2>
@@ -163,19 +170,25 @@
       </p>
     </article>
 
-    <hr />
-    <h2>Interactive HTML</h2>
-    <div id="lucky-number">?</div>
-    <p><button onclick="play()">Play</button></p>
-    <p>
-      <button onclick="setToSmallFontSize()">Small Font Size</button>
-      <button onclick="setToBigFontSize()">Big Font Size</button>
-    </p>
-    <p>
-      <button onclick="changeToRed()">Red</button>
-      <button onclick="changeToGreen()">Green</button>
-      <button onclick="changeToBlue()">Blue</button>
-    </p>
+    <div class="js-interaction-demo">
+      <h2>Dynamic HTML</h2>
+      <p>
+        This part gives demonstration how HTML button clickings trigger
+        JavaScript codes executions and consequently how JavaScript on-the-fly
+        change the web page contents without reloading the page.
+      </p>
+      <div id="lucky-number">?</div>
+      <p><button onclick="play()">Play</button></p>
+      <p>
+        <button onclick="setToSmallFontSize()">Small Font Size</button>
+        <button onclick="setToBigFontSize()">Big Font Size</button>
+      </p>
+      <p>
+        <button onclick="changeToRed()">Red</button>
+        <button onclick="changeToGreen()">Green</button>
+        <button onclick="changeToBlue()">Blue</button>
+      </p>
+    </div>
 
     <hr />
     <footer>
