@@ -4,7 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Syntax</title>
+    <title>Basic JavaScript Syntax</title>
+    <style>
+      h2 {
+        margin-top: 2.5em;
+      }
+
+      pre {
+        border: solid 1px #ccc;
+        padding: 20px;
+        line-height: 1.5;
+      }
+
+      code {
+        font-size: larger;
+        color: orange;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -18,5 +34,137 @@
       |
       <a href="./d3_demo.html">D3.js</a>
     </nav>
+    <h1>JavaScript Syntax</h1>
+    <hr />
+    <h2>Variable and Data Type</h2>
+    <ul>
+      <li>
+        variable names can contain letters, digits, underscores, and dollar
+        signs.
+      </li>
+      <li>variable names must begin with a letter</li>
+      <li>
+        variable names are case sensitive (y and Y are different variables)
+      </li>
+      <li>
+        JavaScript data types include string, number, boolean, array and object
+      </li>
+      <li>you can use typeof keyword to check a type of a variable</li>
+      <li>
+        JavaScript is dynamic types, meaning the same variable can be used to
+        hold different data types
+      </li>
+    </ul>
+    <pre>
+// Vairable Declarations        
+x = 10; 
+y = 3;
+z = 10;
+w = "10";
+tel = "91239123";
+areaCode = "852";
+isStudent = true;
+client = {
+    client_id: 1234,
+    company_name: "ABC Co.",
+    tel: [22222222, 22223333],
+    address: {
+        building: "Inno Square",
+        city: "Hong Kong"
+    }
+};
+
+// Variable Type Checking
+typeof x;
+typeof tel;
+typeof isStudent;
+typeof client;
+typeof client.client_id;
+typeof client.company_name;
+typeof client.address;
+    </pre>
+
+    <h2>Arithmetic Operators</h2>
+    <p>
+      <code>+</code> : Addition <br />
+      <code>-</code> : Subtraction <br />
+      <code>*</code> : Multiplication <br />
+      <code>**</code> : Exponentiation (ES2016) <br />
+      <code>/</code> : Division <br />
+      <code>%</code> : Modulus (Division Remainder) <br />
+      <code>++</code> : Increment <br />
+      <code>--</code> : Decrement <br />
+    </p>
+    <pre>
+ x + y;
+ x - y;
+ x * y;
+ x / y;      
+ x % y;
+ x++;
+ y--;
+    </pre>
+
+    <h2>Comparison Operators</h2>
+    <p>
+      <code>==</code> equal to <br />
+      <code>===</code> equal value and equal type <br />
+      <code>!=</code> not equal <br />
+      <code>!==</code>!== not equal value or not equal type <br />
+      <code>&gt;</code> greater than <br />
+      <code>&lt;</code>< less than <br />
+      <code>&gt;=</code> greater than or equal to <br />
+      <code>&lt;=</code> less than or equal to <br />
+    </p>
+    <pre>
+x = 10; 
+y = 3;
+z = 10;  
+w = "10";     
+x == y;
+x == z;
+x == w;
+x === w;
+x != y;
+x > y;
+z < y;
+x >= w;
+z <= w;
+    </pre>
+
+    <h2>if ... else ...</h2>
+    <pre>
+if (x>y) {
+    console.log("x is a bigger value.")
+} else {
+    console.log("x is NOT a bigger value.")
+}     
+    </pre>
+
+    <h2>for loop</h2>
+    <pre>
+students = ["Apple", "Ben", "Cathy", "Debra", "Eve"];
+for (i=0; i&lt;names.length; i++) {
+console.log("Student ", i, " is ", student[i])
+}       
+
+
+// or
+for (student of students) {
+    console.log(student)
+}
+    </pre>
+
+    <h2>Function</h2>
+    <pre>
+// Declaring Function        
+function greet(to) {
+    console.log("Hello", to);
+}   
+
+// Calling function
+greet("John");
+greet("Peter");
+    </pre>
   </body>
 </html>
