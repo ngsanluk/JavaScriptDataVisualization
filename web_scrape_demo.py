@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = "http://localhost:3000/index.html"
+url = "http://localhost:5500/index.html"
 headers = requests.utils.default_headers()
 headers.update({ 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'})
 
